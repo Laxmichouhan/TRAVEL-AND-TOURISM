@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism FAQ</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+
+<body>
+
+    <div class="faq-container">
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        <ul class="faq-list">
+            <li class="faq-item">
+                <div class="faq-question">Is India safe for tourists?</div>
+                <div class="faq-answer">Yes, India is generally safe for tourists. However, it's always recommended to
+                    take normal precautions and be aware of your surroundings.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">What are some must-visit tourist destinations in India?</div>
+                <div class="faq-answer">Some popular tourist destinations in India include the Taj Mahal, Jaipur, Goa,
+                    Kerala, and the Himalayas.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">What is the best time to visit India?</div>
+                <div class="faq-answer">The best time to visit India depends on the region you plan to visit. Generally,
+                    the winter months (October to March) are pleasant in most parts of the country.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">How can I try local cuisine in India?</div>
+                <div class="faq-answer">You can try local cuisine at street food stalls, local restaurants, or even
+                    participate in food tours that offer a taste of authentic Indian dishes.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">What should I wear when visiting religious sites in India?</div>
+                <div class="faq-answer">It's advisable to dress modestly when visiting religious sites in India. This
+                    usually means covering your shoulders and knees.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">Do I need a visa to visit India?</div>
+                <div class="faq-answer">Yes, most visitors to India require a visa. The type of visa you need will
+                    depend on the purpose and duration of your visit.</div>
+            </li>
+            <li class="faq-item more-questions" style="display: none;">
+                <div class="faq-question">How can I apply for a visa to visit India?</div>
+                <div class="faq-answer">You can apply for an Indian visa online through the official website of the
+                    Indian Visa Application Center or through the nearest Indian embassy or consulate in your country.
+                </div>
+            </li>
+            <li class="faq-item more-questions" style="display: none;">
+                <div class="faq-question">How should I deal with people in India if they don't know Hindi?</div>
+                <div class="faq-answer">While Hindi is widely spoken in India, especially in the northern parts, English
+                    is also commonly understood, particularly in urban areas and among people working in the tourism
+                    industry. Additionally, India is a diverse country with many regional languages, so learning a few
+                    basic phrases in the local language of the region you're visiting can be helpful and appreciated.
+                </div>
+            </li>
+        </ul>
+        <div class="read-more">Read more</div>
+    </div>
+
+    <script>
+        // JavaScript for toggling answers
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.nextElementSibling.classList.toggle('faq-answer-visible');
+            });
+        });
+
+        // JavaScript for "Read more" functionality
+        document.querySelector('.read-more').addEventListener('click', function () {
+            const moreQuestions = document.querySelectorAll('.more-questions');
+            moreQuestions.forEach(question => {
+                question.style.display = 'block';
+            });
+            this.style.display = 'none'; // Hide the "Read more" button after clicking
+        });
+    </script>
+
+</body>
+
+</html>
